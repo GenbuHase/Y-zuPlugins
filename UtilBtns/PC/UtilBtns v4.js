@@ -13,7 +13,7 @@
  * https://genbuproject.github.io/Programs/Y-zuPlugin/UtilBtns/
  *####################################################################################################
 /*/
-window.addEventListener("DOMContentLoaded", () => {
+(() => {
 	let _scriptElem = document.createElement("script");
 		_scriptElem.src = "https://genbuproject.github.io/Programs/DOM Extender/DOM Extender v3.4.js";
 

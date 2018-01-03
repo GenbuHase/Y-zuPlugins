@@ -9,7 +9,7 @@
  * このプラグインは色々と便利なボタンを追加します。
  *####################################################################################################
 /*/
-window.addEventListener("DOMContentLoaded", () => {
+(() => {
 	let _scriptElem = document.createElement("script");
 		_scriptElem.src = "https://genbuproject.github.io/Programs/DOM Extender/DOM Extender v3.4.js";
 
