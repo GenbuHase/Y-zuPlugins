@@ -18,17 +18,17 @@
 			const VERSION = "v6";
 
 			const IDS = {
-				CONTAINER: "utilBtn",
+				CONTAINER: "utilBtns",
 
 				BUTTONS: {
-					RISA: "utilBtn__button--risa",
-					GOJI: "utilBtn__button--goji",
-					HARUKIN: "utilBtn__button--harukin"
+					RISA: "utilBtns__button--risa",
+					GOJI: "utilBtns__button--goji",
+					HARUKIN: "utilBtns__button--harukin"
 				}
 			}
 
 			const CLASSES = {
-				BUTTON: "utilBtn__button",
+				BUTTON: "utilBtns__button",
 				TOOTCONTAINER: "compose-form__publish-button-wrapper"
 			}
 
