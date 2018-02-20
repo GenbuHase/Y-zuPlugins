@@ -1,6 +1,6 @@
 /*/
  *####################################################################################################
- * Plugin for Yづドン ～トゥート読み上げ(For Mobile)～ v2
+ * HomeObserver(For Mobile) v2
  * 
  * Author: Genbu Hase
  * Last Updated: 2017/10/21

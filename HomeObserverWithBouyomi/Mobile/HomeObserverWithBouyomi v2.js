@@ -1,6 +1,6 @@
 /*/
  *####################################################################################################
- * Plugin for Yづドン ～トゥート読み上げ With 棒読みちゃん(For Mobile)～ v2
+ * HomeObserver With 棒読みちゃん(For Mobile) v2
  * 
  * Author: Genbu Hase
  * Last Updated: 2017/10/21
