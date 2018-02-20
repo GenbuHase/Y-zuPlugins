@@ -9,7 +9,7 @@
  * このプラグインは投稿の読み上げ機能を追加します。
  *####################################################################################################
 /*/
-class TextSpeaker {
+class Speecher {
 	constructor () {}
 
 	/**
@@ -18,12 +18,13 @@ class TextSpeaker {
 	 * @param {String} name 声質の名前
 	 * @returns {SpeechSynthesisVoice}
 	 */
-	static getVoice (name) {
-		let result = speechSynthesis.getVoices()[0];
+	static getVoice (name = "") {
+		let voices = speechSynthesis.getVoices(),
+			result = voices[0];
 
-		speechSynthesis.getVoices().forEach((voice) => {
-			!(voice.name == name) || (result = voice);
-		});
+			voices.forEach(voice => {
+				if (voice.name == name) result = voice;
+			});
 
 		return result;
 	}
@@ -31,19 +32,19 @@ class TextSpeaker {
 	/**
 	 * 発声開始
 	 * 
-	 * @param {Number} [speed=1] 読み上げ速度
-	 * @param {Number} [pitch=1] 読み上げ音程
-	 * @param {Number} [volume=1] 読み上げ音量
-	 * @param {String} [text=""] 読み上げテキスト
-	 * @param {SpeechSynthesisVoice} [type=SpeechSynthesisVoice()] 読み上げ声質
+	 * @param {Number} [speed = 1] 読み上げ速度
+	 * @param {Number} [pitch = 1] 読み上げ音程
+	 * @param {Number} [volume = 1] 読み上げ音量
+	 * @param {String} [text = ""] 読み上げテキスト
+	 * @param {SpeechSynthesisVoice} [type = new SpeechSynthesisVoice()] 読み上げ声質
 	 */
-	speak (speed, pitch, volume, text, type) {
+	speak (speed = 1, pitch = 1, volume = 1, text = "", type = Speecher.getVoice("")) {
 		let ctx = new SpeechSynthesisUtterance();
-			ctx.rate = speed || 1,
-			ctx.pitch = pitch || 1,
-			ctx.volume = volume || 1,
-			ctx.text = text || "",
-			ctx.voice = type || TextSpeaker.getVoice("");
+			ctx.rate = speed,
+			ctx.pitch = pitch,
+			ctx.volume = volume,
+			ctx.text = text,
+			ctx.voice = type;
 
 		speechSynthesis.speak(ctx);
 	}
