@@ -3,7 +3,7 @@
  * HomeObserver v3
  * 
  * Author: Genbu Hase
- * Last Updated: 2018/02/20
+ * Last Updated: 2018/03/14
  * 
  * Details:
  * このプラグインは投稿の読み上げ機能を追加します。
